@@ -34,6 +34,10 @@ var type_to_str = {
 	27: "MAX",
 }
 
+
+
+# Helpers
+
 func describe(text):
 	TestUtils.describe_count += 1
 	print("\n-----Testing: %s (%s)" % [str(text), get_script().get_path()])
@@ -45,6 +49,10 @@ func test(text, sub_text= ""):
 func t(text):
 	print("\t" + str(text))
 
+func p(text):
+	print(text)
+
+# Asserts
 
 func assert_has(thing, what):
 	if thing.has(what):
@@ -116,24 +124,4 @@ func assert_true(thing):
 		return
 
 	t("Expected %s to be true" % str(thing))
-	return _randx123xyz[""]
-
-func assert_is_mongo_error(thing):
-	if typeof(thing) == TYPE_DICTIONARY:
-		return
-
-	if thing.size() == 1:
-		return
-
-	if thing.has("MongoGodotError"):
-		return
-
-	t("Expected %s to be a Dictionary<MongoError>" % str(thing))
-	return _randx123xyz[""]
-
-func assert_is_not_mongo_error(thing):
-	if not (typeof(thing) == TYPE_DICTIONARY and thing.size() == 1 and thing.has("MongoGodotError")):
-		return
-
-	t("Expected %s to not be a Dictionary<MongoError>" % str(thing))
 	return _randx123xyz[""]

@@ -2,7 +2,8 @@ tool
 extends EditorPlugin
 
 """
-Mongo Driver Godot Tester
+Modular Tester Godot Plugin
+https://github.com/3ddelano/modular-tester-godot
 MIT License (See LICENSE.md)
 
 Copyright (c) 2022 Delano Lourenco
